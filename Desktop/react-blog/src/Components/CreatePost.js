@@ -1,6 +1,8 @@
 
 import {firestore} from '../firebase';
 import {useFormInput} from '../hooks'
+import classes from './Button.module.css';
+
 function CreatePost() {
 
     console.log('hello');
@@ -27,6 +29,7 @@ function CreatePost() {
         <h1>
         Create Post
         </h1>
+        <form onSubmit={handleSubmit}>
             <div className="form-field">
                 <label>Title</label>
                 <input {...title}/>   
@@ -43,9 +46,10 @@ function CreatePost() {
                 {...content}
                 ></textarea>
             </div>
-            <button type="submit" className="create-post-btn" onClick={handleSubmit}>
+            <button className={classes.createPostBtn}>
                 Create Post
             </button>
+            </form>
     </div>
     );
 }

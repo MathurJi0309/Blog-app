@@ -21,7 +21,7 @@ function Home() {
     },[]);
     return (
     <div className="home">
-        <h1>Tech blog</h1>
+        <h1 style={styles.heading}>Tech blog</h1>
         <div id="blog-by">Anilesh</div>
 
 
@@ -37,3 +37,10 @@ function Home() {
     );
 }
 export default Home;
+
+const styles ={
+    heading :{
+        marginTop:30,
+        fontSize:85
+    },
+};
